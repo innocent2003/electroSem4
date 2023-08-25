@@ -16,5 +16,31 @@
     </head>
     <body>
         <h1>Hello World!</h1>
+         <sql:setDataSource var = "snapshot" driver = "com.mysql.jdbc.Driver"
+         url = "jdbc:mysql://localhost/javaproject2"
+         user = "root"  password = ""/>
+
+         <sql:query dataSource = "${snapshot}" var = "result">
+            SELECT * from Product;
+         </sql:query>
+ 
+      <table border = "1" width = "100%">
+         <tr>
+            <th> ID</th>
+            <th>Product Name</th>
+             <th>Product Image</th>
+            <th>Price</th>
+            <th>Quantitiy</th>
+         </tr>
+         
+         <c:forEach var = "row" items = "${result.rows}">
+            <tr>
+               <td> <c:out value = "${row.id}"/></td>
+               <td> <c:out value = "${row.ProductName}"/></td>
+               <td> <img src="<c:out value = "${row.ProductImage}"/>"/></td>
+               <td> <c:out value = "${row.Quantity}"/></td>
+            </tr>
+         </c:forEach>
+      </table>
     </body>
 </html>

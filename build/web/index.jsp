@@ -48,7 +48,7 @@
                         <li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
                     </ul>
                     <ul class="header-links pull-right">
-                        <li><a href="views/login.jsp"><i class="fa fa-user"></i> Login</a></li>
+                        <li><a href="login.jsp"><i class="fa fa-user"></i> Login</a></li>
                         <li><a>|</a></li>
                         <li><a href="register.jsp"><i class="fa fa-user"></i> Register</a></li>
                         <li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
